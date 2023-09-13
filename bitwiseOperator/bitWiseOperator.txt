@@ -1,0 +1,288 @@
+Bitwise Operator - operation to be done on bit 
+(bit level)
+
+AND &
+OR ||
+NOT !
+XOR ^
+
+Truth Table 
+AND &
+ a   b   output
+ o   o    o
+ o   1    o
+ 1   o    o
+ 1   1    1
+
+OR ||
+ a   b   output
+ o   o    o
+ o   1    1
+ 1   o    1
+ 1   1    1
+
+XOR ^
+
+ a   b   output
+ o   o    o
+ o   1    1  // same 0 different  1
+ 1   o    1
+ 1   1    o
+
+NOT !
+Input output
+ 0       1
+ 1       0
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - 
+
+1's complement 
+Signed bit
+1’s complement of binary number 10101110 is  01010001.
+
+1’s Complementation in Signed Binary number Representation:
+
+1 1010(-5)   0 0101 (+5)
+here 1 represent - negative number
+
+-5 is represented using the following steps:
+
+(i) +5 = 0 0101
+
+(ii) Take 1’s complement of 0 0101 and that is 1 1010. MSB is 1 which indicates that number is negative.
+
+MSB is always 1 in case of negative numbers.
+
+Range of Numbers - 
+		For k bits register, positive largest number that can be stored is ( 2 (k-1) -1)  and negative lowest number that can be stored 		is -( 2 (k-1) -1).
+
+Note - that drawback of this system is that 0 has two different representation one is -0 (e.g., 1 1111 in five bit register) and second is +0 (e.g., 0 0000 in five bit register).
+
+Example:  add -1010 and -0101 in five bit-register.
+
+These five bit numbers are -01010 and -00101. Add complements of these numbers, 10101+11010 =1 01111 . Since, there is a carry bit 1, so add this to the LSB of result, i.e., 01111+1=10000 . Now take the 1’s complement of this result, which will be 01111 and this number is negative, i.e, -01111, which is answer.
+
+Note that  end-around-carry-bit  addition occurs only in 1’s complement arithmetic operations but not in 2’s complement arithmetic operations.
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - 
+
+Left And Right shift operators
+<<       >>
+
+int a =2 
+0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0  | 0 0 0 0 0 0 0 0 |  0 0 0 0 0 0 1 0           2 
+a<<1  left shift by 1
+
+0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0  | 0 0 0 0 0 0 0 0 |  0 0 0 0 0 1 0 _
+
+0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0  | 0 0 0 0 0 0 0 0 |  0 0 0 0 0 1 0 0 // left side new 0   / multipy 2
+
+Right Shift Operator
+
+int a =2 
+0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0  | 0 0 0 0 0 0 0 0 |  0 0 0 0 0 0 1 0          2 
+a>>1  right shift by 1
+
+_ 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0  | 0 0 0 0 0 0 0 0 |  0 0 0 0 0 0 0 1
+
+0 0 0 0 0 0 0 0 | 0 0 0 0 0 0 0 0  | 0 0 0 0 0 0 0 0 |  0 0 0 0 0 1 0 0 // right side new 0  / divide by 2 but not for all cases
+
+// - negative number will be change to positvie that's the constraint 
+but this can be handle by complier because int is signed
+in case unsigned positive number ayega
+n<<-1 // garbage value -- warning 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - 
+
+
+Pre / Post - increment/decrement 
+
+
+Pre - increment ++a (phle increment kro phir use)
+Pre - decrement --a (phle decrement kro phir use)
+Post - increment a++ (phle use kro phir increment)
+Post - decrement a-- (phle use kro phir decrement)
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - 
+
+continue And Break
+
+Continue - iteration skip
+
+break - exit from the looop 
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - 
+
+Variable Scoping - Local Scoping 
+		 - Global Scoping
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - 
+
+
+- Local Scoping 
+
+Anything between ‘{‘ and ‘}’ is said to inside a block.
+Local variables do not exist outside the block in which they are declared, i.e. they can not be accessed or used outside that block.
+
+
+// CPP program to illustrate					
+// usage of local variables				
+#include<iostream>
+using namespace std;           
+
+void func()
+{
+	// this variable is local to the
+	// function func() and cannot be
+	// accessed outside this function          // Output - Error: age was not declared in this scope
+	int age=18;
+}
+
+int main()
+{
+	cout<<"Age is: "<<age;
+	
+	return 0;
+}
+
+Rectified Program : To correct the above error we have to display the value of variable age from the function func() only. This is shown in the below program: 
+
+// CPP program to illustrate
+// usage of local variables
+#include<iostream>
+using namespace std;
+
+void func()
+{
+	// this variable is local to the
+	// function func() and cannot be        		// output - Age is: 18
+	// accessed outside this function
+	int age=18;
+	cout<<age;
+}
+							// you can access local variable  by calling function 
+int main()
+{
+	cout<<"Age is: ";
+	func();
+	
+	return 0;
+}
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - 
+
+
+- Global Scoping
+As the name suggests, Global Variables can be accessed from any part of the program.
+
+// CPP program to illustrate
+// usage of global variables
+#include<iostream>
+using namespace std;
+
+// global variable
+int global = 5;
+
+// global variable accessed from
+// within a function
+void display()
+{
+	cout<<global<<endl;
+}
+
+// main function
+int main()
+{
+	display();
+	
+	// changing value of global
+	// variable from main function
+	global = 10;
+	display();
+}
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - 
+
+
+**What if we want to access global variable when there is a local variable with same name???
+Ans - // variable using scope resolution operator ::
+
+// C++ program to show that we can access a global
+// variable using scope resolution operator :: when
+// there is a local variable with same name
+#include<iostream>
+using namespace std;
+
+// Global x
+int x = 0;
+
+int main()
+{
+// Local x
+int x = 10;
+***cout << "Value of global x is " << ::x;
+cout<< "\nValue of local x is " << x;
+return 0;
+}
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - 
+
+
+
+
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
