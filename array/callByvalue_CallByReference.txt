@@ -1,0 +1,44 @@
+Call By Value (m)- duplicate data structure is created and changes will be done in the dupliacate one not in original one 
+// Concept of pass by value
+// copy banti h pass by value
+
+
+#include<bits/stdc++.h>
+using namespace std;
+
+void solve(int m){
+    m=m*100;
+    cout<<m<<" function"<<endl;  // Output - 10  1000 function  10 main 
+}
+
+
+int main(){
+    int n = 10;
+      cout<<n<<endl;
+    solve(n);
+      cout<<n<<" main"<<endl;
+}
+
+
+Call By reference(&m) - changes will be done in original one 
+
+
+// Concpet of pass by reference
+
+// in case of array it automatically works as pass by reference 
+// array k case m address bhjte h cpoy nhi banti 
+#include<bits/stdc++.h>
+using namespace std;
+
+void solve(int &n){
+    n=n*100;
+    cout<<n<<" function"<<endl; // Output 10  1000 function 1000 main
+}
+
+
+int main(){
+    int n = 10;
+      cout<<n<<endl;
+    solve(n);
+      cout<<n<<" main"<<endl;
+}

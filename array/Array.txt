@@ -1,0 +1,85 @@
+Array - Linear Data structure 
+      - collection of same type of data types element 
+      - each element have unique address from which we can access the element  	
+
+dataType arr[Size] = {elements}
+
+
+int arr[5] =    { 1 , 2 , 3 , 4 , 5}
+Index		  0   1   2   3   4     // starts from 0 
+memory address   100 104 108 112 116   // int is of 4 bytes (in some compiler 2)
+
+contiguous address
+
+
+*call by reference we give address - Array works on this concept
+
+// static Array  - size khudse starting m dena hoga user se input size nhi le skte
+ int arr[3] = {22 , 33, 44};
+
+// Dynamic Array - size can be taken as input from user 
+
+int n ;
+cin>> n;
+int *arr = new int[n];
+// each element would be 0 or garbage
+
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - 
+
+
+
+Following are the basic operations supported by an array.
+
+Traverse − print all the array elements one by one.
+
+Insertion − Adds an element at the given index.
+
+Deletion − Deletes an element at the given index.
+
+Search − Searches an element using the given index or by the value.
+
+Update − Updates an element at the given index.
+
+Display − Displays the contents of the array.
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - 
+
+
+
+
+Data Type	Default Value
+bool		false
+char		0
+int		0
+float		0.0
+double		0.0f
+void	
+wchar_t		0
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - 
+
+Array function 
+
+arr.front()
+arr.back()
+arr.at()
+arr[i] - access the element at ith position
+
+arr.size() - No. of elements present in an array
+arr.max_size()
+swap()
+max()
+min()
+ar.fill(0);
+ar1.empty();
+
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - 
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  - - - - - - - - - - - 
+
+
+
+

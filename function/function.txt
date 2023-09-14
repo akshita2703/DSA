@@ -1,0 +1,27 @@
+Functions - to improve readabilty , Reusaabilty 
+	    A block of code/ sub- program 
+
+
+Input ---> function ---> Output
+
+return type  functionName( Input Parameter )
+{
+	some code 
+	return ; -- void
+	return 0/1; --bool
+	return int var ; --interger 
+}
+
+Declare -- void printMessage();
+Define -- int AddNum(int a ,int b){  // Function upr declare krke neeche define krsktee or phir use
+		int sum = a+b;
+		retrun sum;
+}
+call -- AddNum(2,3);
+
+
+Function Call stack :- 
+Stack(LIFO) - Last In First Out 
+	    - function call 
+	    - which func is called
+	    - return Value
