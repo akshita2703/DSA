@@ -1,3 +1,4 @@
+
 /*
 Pattern
 N = 4
@@ -31,4 +32,5 @@ int main(){
         cout<<"\n";
         i = i + 1;
     }
+
 }

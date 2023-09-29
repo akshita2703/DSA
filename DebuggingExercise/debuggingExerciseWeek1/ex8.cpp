@@ -1,3 +1,4 @@
+
 /*
 Pattern
 N = 5

@@ -1,3 +1,4 @@
+
 /*
 Pattern
 N = 4
@@ -21,4 +22,5 @@ int main(){
         cout<<endl;
         
     }
+
 }
