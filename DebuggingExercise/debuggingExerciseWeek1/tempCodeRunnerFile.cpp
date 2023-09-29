@@ -1,3 +1,4 @@
+
  // k = 1;
         // while(k<=gaps){
         //     cout<<" ";
