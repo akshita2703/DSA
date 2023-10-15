@@ -1,5 +1,5 @@
 //https://leetcode.com/problems/house-robber/
-// tabulation
+// tabulation - space optimaization
 
 #include <iostream>
 #include <vector>
