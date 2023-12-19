@@ -1,0 +1,1 @@
+Student s2 = s1;
