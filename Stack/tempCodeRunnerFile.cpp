@@ -1,0 +1,1 @@
+insertSorted(st,35);
